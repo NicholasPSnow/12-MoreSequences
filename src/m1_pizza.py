@@ -589,6 +589,7 @@ def fancy_polygon(window, circle, number_of_lines, hops_to_next_point, color,
         else:
             v=k + hops_to_next_point
         line = rg.Line(points[k], points[v])
+        line.arrow='last'
         line.attach_to(window)
         points[k].attach_to(window)
     window.render()
